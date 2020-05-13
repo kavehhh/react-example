@@ -14,4 +14,4 @@ In the second window..
 
 `npm start`
 
-That should open up a window in the browser for you. There's a button that says "Activate trace". Hit that button. Check Lightstep Explorer for the trace. 
+That should open up a window in the browser for you. There's a button that says "Activate Trace". Hit that button. Check Lightstep Explorer for the trace. 
