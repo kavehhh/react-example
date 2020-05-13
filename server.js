@@ -1,21 +1,24 @@
-const tracer = require('ls-trace').init(
-   {
- 	experimental: {
- 	  b3: true
- 	 },
- 	 debug: true
-   }
- )
+const tracer = require('ls-trace').init({
+  experimental: {
+    b3: true
+  }
+})
 
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const port = 3001
 
-app.get('/', (req, res) => res.send('Hello Server!'))
+app.use(cors());
+
+app.get('/', function (req, res) {
+	console.log(req.headers);
+	res.send('Hello Server!') 
+})
 
 app.get('/test', function (req, res) {
   console.log(req.headers);
-  res.send('gang gang gang');
+  res.send('send response');
 })
 
 app.listen(port, () => console.log(`Server app listening on port ${port}!`))
