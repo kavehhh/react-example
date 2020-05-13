@@ -25,7 +25,6 @@ function testLightstep() {
   var carrier = {};
   opentracing.globalTracer().inject(spanContext, opentracing.FORMAT_HTTP_HEADERS, carrier);
   console.log(carrier);
-  //carrier['x-b3-traceid'] = carrier['x-b3-traceid'].substring(16) + carrier['x-b3-traceid'].substring(0,16)
 
   var options = {
     url: 'http://localhost:3001/test',
@@ -49,7 +48,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-          Kaveh
+          Hi!
           <button onClick={testLightstep}>
             Activate Trace
           </button>
